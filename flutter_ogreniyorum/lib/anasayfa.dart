@@ -12,8 +12,17 @@ class _AnasayfaState extends State<Anasayfa> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Merhaba Projem"),
-      ),
+        
+        title: const Text("Merhaba Projem",),),
+        body: const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Hello")
+            ],
+          ),
+        ),
+      
     );
          
   }
