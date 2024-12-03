@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ogreniyorum/colors.dart';
+
 
 class Anasayfa extends StatefulWidget {
   const Anasayfa({super.key});
@@ -13,12 +15,14 @@ class _AnasayfaState extends State<Anasayfa> {
     return Scaffold(
       appBar: AppBar(
         
-        title: const Text("Merhaba Projem",),),
-        body: const Center(
+        title: Text("Merhaba Projem",style:TextStyle(fontFamily: "Alex",color:yaziRengi,fontSize: 24),),
+        backgroundColor: mainColor,
+        centerTitle: true,),
+        body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Hello")
+              Text("Hello",style: TextStyle(color : yaziRengi1,fontFamily: "caramel",fontSize: 35),)
             ],
           ),
         ),
