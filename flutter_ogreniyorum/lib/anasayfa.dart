@@ -14,7 +14,6 @@ class _AnasayfaState extends State<Anasayfa> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
         title: Text("Merhaba Projem",style:TextStyle(fontFamily: "Alex",color:yaziRengi,fontSize: 24),),
         backgroundColor: mainColor,
         centerTitle: true,),
@@ -22,7 +21,12 @@ class _AnasayfaState extends State<Anasayfa> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Hello",style: TextStyle(color : yaziRengi1,fontFamily: "caramel",fontSize: 35),)
+              Text("Hello",style: TextStyle(color : yaziRengi1,fontFamily: "caramel",fontSize: 35),),
+              const Padding(padding: EdgeInsets.all(15)),
+              TextButton(
+                style: TextButton.styleFrom(backgroundColor: mainColor),
+                onPressed: (){}, child: Text("Hello button",style: TextStyle(color: yaziRengi),))
+
             ],
           ),
         ),
