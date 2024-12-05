@@ -25,7 +25,15 @@ class _AnasayfaState extends State<Anasayfa> {
               const Padding(padding: EdgeInsets.all(15)),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: mainColor),
-                onPressed: (){}, child: Text("Hello button",style: TextStyle(color: yaziRengi),))
+                onPressed: (){}, child: Text("Hello button",style: TextStyle(color: yaziRengi),)),
+                Padding(padding: const EdgeInsets.all(16),
+
+                  child: Container(width: 180,height: 150,
+                  child: Image.asset("resimler/pizza.png"),
+                  )
+                  ,
+                )
+                
 
             ],
           ),
