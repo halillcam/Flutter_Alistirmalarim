@@ -8,6 +8,7 @@ class Kullanicietkilesimi extends StatefulWidget {
 }
 
 class _KullanicietkilesimiState extends State<Kullanicietkilesimi> {
+  var tfControl = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,10 +58,49 @@ class _KullanicietkilesimiState extends State<Kullanicietkilesimi> {
 
             }, child: const Text("SnackBar (Ozellestirlmis)")),
              ElevatedButton(onPressed: (){
+              showDialog(
+                context: context, 
+                builder: (BuildContext context){
+                  return AlertDialog(
+                    title: const Text("Baslik"),
+                    content: const Text("Icerik"),
 
+                    actions: [
+                      TextButton(onPressed: (){
+                      Navigator.pop(context);
 
+                      }, child: const Text("Tamam"),
+                      
+                      ),
+                    ],
+                  );
+                }
+                
+                );
             }, child: const Text("Alert")),
              ElevatedButton(onPressed: (){
+
+               showDialog(
+                context: context, 
+                builder: (BuildContext context){
+                  return AlertDialog(
+                    title: const Text("Kayit Islemi"),
+                    content: TextField(controller: tfControl,decoration: const InputDecoration(hintText: "Veri"),),
+                    backgroundColor: Colors.grey,
+
+                    actions: [
+                      TextButton(onPressed: (){
+                      Navigator.pop(context);
+                      print("Alinan veri : ${tfControl.text}");
+                      tfControl.text = "";
+                      }, child: const Text("Tamam"),
+                      
+                      ),
+                    ],
+                  );
+                }
+                
+                );
 
             }, child: const Text("Alert (Ozellestirilmis)")),
           ],
